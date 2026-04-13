@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+body {
+    background-color: #f2f3f5;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+/* 导航栏 */
+.header {
+    height: 54px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    background: #fff;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.nav-title {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.icon-back, .icon-more {
+    font-size: 18px;
+    width: 40px;
+    cursor: pointer;
+}
+
+/* 主卡片 */
+.main-card {
+    padding: 20px 16px;
+}
+
+.event-row {
+    display: flex;
+    margin-bottom: 18px;
+}
+
+.event-img {
+    width: 70px;
+    height: 96px;
+    border-radius: 4px;
+    margin-right: 14px;
+    object-fit: cover;
+}
+
+.event-info {
+    flex: 1;
+}
+
+.order-id {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.event-title {
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 6px;
+}
+
+.event-loc {
+    font-size: 12px;
+    color: #888;
+}
+
+.facepass-container {
+    background: #f0f4ff;
+    border-radius: 10px;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.facepass-link {
+    color: #5d5fef;
+    text-decoration: underline;
+    font-weight: 700;
+    margin: 0 4px;
+}
+
+.facepass-btn {
+    border: 1px solid #5d5fef;
+    background: #fff;
+    color: #5d5fef;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* 列表板块 */
+.info-section {
+    padding: 22px 16px;
+    border-top: 8px solid #f2f3f5;
+}
+
+.section-hd {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #000;
+    display: block;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 11px;
+    font-size: 14px;
+    align-items: flex-start;
+}
+
+.label {
+    width: 100px; 
+    color: #888;
+    flex-shrink: 0;
+}
+
+.value {
+    color: #000;
+    font-weight: 500;
+    flex: 1;
+    text-align: right;
+}
+
+.text-blue { color: #5d5fef; }
+.text-red { color: #ff4d4f; font-weight: 600 !important; }
+
+/* 虚线样式 */
+.dash-line {
+    border: none;
+    border-top: 1px dashed #e5e5e5;
+    margin: 16px 0;
+}
+
+.total-box {
+    margin-top: 4px;
+}
+
+.total-label {
+    width: auto;
+    font-weight: 700;
+    color: #000 !important;
+}
+
+.total-val {
+    font-size: 20px;
+    color: #5d5fef;
+    font-weight: 800;
+}
+
+/* 座位卡片 */
+.seat-box {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 5px;
+}
+
+.seat-id {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+/* --- 底部按钮区还原 --- */
+.action-bar {
+    padding: 10px 16px 30px;
+}
+
+.btn-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+/* 通用按钮基础 */
+.btn-cancel, .btn-ticket, .btn-contact {
+    height: 50px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    width: 100%;
+}
+
+/* 取消预订 (禁用状态) */
+.btn-cancel {
+    background-color: #ecedf0;
+    color: #b0b3b9;
+}
+
+/* 电子票 (蓝色描边) */
+.btn-ticket {
+    background-color: #fff;
+    border: 1.5px solid #5d5fef;
+    color: #5d5fef;
+}
+
+/* 联系客服 (黑色描边) */
+.btn-contact {
+    background-color: #fff;
+    border: 1.5px solid #222;
+    color: #222;
+}
+
+/* 页脚 */
+.bottom-footer {
+    background: #f8f9fa;
+    padding: 40px 16px;
+    color: #999;
+}
+
+.footer-logo {
+    font-size: 19px;
+    font-weight: bold;
+    color: #cbd0d6;
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    font-size: 11px;
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+.btn-app {
+    width: 100%;
+    height: 42px;
+    background: #fff;
+    border: 1px solid #dee2e6;
+    color: #495057;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+}
