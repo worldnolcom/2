@@ -38,7 +38,6 @@ body {
 .icon-back, .icon-more {
     font-size: 18px;
     width: 40px;
-    cursor: pointer;
 }
 
 /* 主卡片 */
@@ -123,6 +122,7 @@ body {
     display: block;
 }
 
+/* --- 核心修改：调整对齐位置 --- */
 .row {
     display: flex;
     margin-bottom: 11px;
@@ -131,16 +131,17 @@ body {
 }
 
 .label {
-    width: 100px; 
+    width: 115px; /* 这里控制左侧标签的宽度，数值越大，右侧信息离左边越远 */
     color: #888;
-    flex-shrink: 0;
+    flex-shrink: 0; /* 保证标签不被挤压 */
 }
 
 .value {
     color: #000;
     font-weight: 500;
     flex: 1;
-    text-align: right;
+    text-align: left; /* 恢复左对齐，但因为有 label 宽度，所以整体看是纵向对齐的 */
+    word-break: break-all;
 }
 
 .text-blue { color: #5d5fef; }
@@ -158,7 +159,6 @@ body {
 }
 
 .total-label {
-    width: auto;
     font-weight: 700;
     color: #000 !important;
 }
@@ -183,7 +183,7 @@ body {
     margin-bottom: 14px;
 }
 
-/* --- 底部按钮区还原 --- */
+/* 底部按钮 */
 .action-bar {
     padding: 10px 16px 30px;
 }
@@ -194,7 +194,6 @@ body {
     margin-bottom: 12px;
 }
 
-/* 通用按钮基础 */
 .btn-cancel, .btn-ticket, .btn-contact {
     height: 50px;
     border-radius: 10px;
@@ -208,20 +207,17 @@ body {
     width: 100%;
 }
 
-/* 取消预订 (禁用状态) */
 .btn-cancel {
     background-color: #ecedf0;
     color: #b0b3b9;
 }
 
-/* 电子票 (蓝色描边) */
 .btn-ticket {
     background-color: #fff;
     border: 1.5px solid #5d5fef;
     color: #5d5fef;
 }
 
-/* 联系客服 (黑色描边) */
 .btn-contact {
     background-color: #fff;
     border: 1.5px solid #222;
